@@ -1,0 +1,24 @@
+﻿
+写入：
+ private void ***w_Click(object sender, EventArgs e)
+        {
+            HslCommunication.OperateResult opresult = PLC.Write(***.Text, Convert.ToInt32(***v.Text));
+            tb_log.Text += ***.Text + "写入" + ***v.Text;
+            if (opresult.IsSuccess) tb_log.Text += "成功\r\n";
+            else tb_log.Text += "失败\r\n";
+        }
+
+读取：
+ private void ***r_Click(object sender, EventArgs e)
+        {
+            HslCommunication.OperateResult<Int32> result = PLC.ReadInt32(***.Text);
+            if (result.IsSuccess)
+            {
+                tb_log.Text += ***.Text + "读取成功：" + result.Content.ToString() + "\r\n";
+ ***rv.Text = result.Content.ToString();
+            }
+            else
+            {
+                tb_log.Text += ***.Text + "读取失败\r\n";
+            }
+        }

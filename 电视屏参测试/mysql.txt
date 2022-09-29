@@ -1,0 +1,123 @@
+﻿-- phpMyAdmin SQL Dump
+-- version 4.8.4
+-- https://www.phpmyadmin.net/
+--
+-- 主机： 127.0.0.1:3306
+-- 生成日期： 2022-05-13 06:17:30
+-- 服务器版本： 5.7.24
+-- PHP 版本： 7.2.14
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- 数据库： `jczx_screen_test`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `system_info`
+--
+
+DROP TABLE IF EXISTS `system_info`;
+CREATE TABLE IF NOT EXISTS `system_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `soft_ver` varchar(200) DEFAULT NULL,
+  `database_ver` varchar(200) DEFAULT NULL,
+  `update_time` datetime DEFAULT NULL,
+  `memo` varchar(2000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='系统信息';
+
+--
+-- 转存表中的数据 `system_info`
+--
+
+INSERT INTO `system_info` (`id`, `soft_ver`, `database_ver`, `update_time`, `memo`) VALUES
+(2, '2.1', '2.1', '2022-05-13 00:00:00', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `user_login_log`
+--
+
+DROP TABLE IF EXISTS `user_login_log`;
+CREATE TABLE IF NOT EXISTS `user_login_log` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login_user_type` varchar(50) NOT NULL,
+  `login_name` varchar(50) NOT NULL,
+  `login_datetime` datetime NOT NULL,
+  `logout_datetime` datetime DEFAULT NULL,
+  `online_hours` decimal(5,2) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `产品参数`
+--
+
+DROP TABLE IF EXISTS `产品参数`;
+CREATE TABLE IF NOT EXISTS `产品参数` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `生产厂商` varchar(100) DEFAULT NULL,
+  `产品名称` varchar(100) DEFAULT NULL,
+  `产品型号` varchar(100) NOT NULL,
+  `屏幕大小` varchar(3) DEFAULT NULL,
+  `中心坐标` varchar(100) DEFAULT NULL,
+  `屏幕宽` int(5) NOT NULL DEFAULT '0' COMMENT '屏幕宽(单位mm)',
+  `屏幕高` int(5) NOT NULL DEFAULT '0' COMMENT '屏幕高(单位mm)',
+  `零点坐标` varchar(100) DEFAULT '0,0,0',
+  `列间距` int(11) DEFAULT '0' COMMENT '列(水平)间距',
+  `行间距` int(11) DEFAULT '0' COMMENT '行(垂直)间距',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `产品参数`
+--
+
+INSERT INTO `产品参数` (`id`, `生产厂商`, `产品名称`, `产品型号`, `屏幕大小`, `中心坐标`, `屏幕宽`, `屏幕高`, `零点坐标`, `列间距`, `行间距`) VALUES
+(7, '华为', NULL, '65', '65', '2180,50,100', 1651, 929, ',,', 0, 0),
+(8, '华为', NULL, '50', '50', '2786.1,-773.0,882.0', 1270, 714, '0,0,0', 0, 0),
+(9, '华为', NULL, '60', '60', '2571.9,-714.0,814.0', 1524, 857, '0,0,0', 0, 0),
+(10, '小米', NULL, '55', '55', '2357.4,-654.0,746.0', 1397, 786, '0,0,0', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `测试数据`
+--
+
+DROP TABLE IF EXISTS `测试数据`;
+CREATE TABLE IF NOT EXISTS `测试数据` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `测试编号` varchar(100) DEFAULT NULL,
+  `测试时间` date DEFAULT NULL,
+  `产品名称` varchar(100) DEFAULT NULL,
+  `产品型号` varchar(100) DEFAULT NULL,
+  `最大亮度` varchar(100) DEFAULT NULL,
+  `均匀性` varchar(1000) DEFAULT NULL,
+  `均匀性最大值` double(8,3) DEFAULT NULL,
+  `均匀性最小值` double(8,3) DEFAULT NULL,
+  `均匀性BP` varchar(100) DEFAULT NULL,
+  `相邻点色彩一致性` decimal(8,3) DEFAULT '0.000',
+  `gamma` varchar(10000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='测试数据';
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

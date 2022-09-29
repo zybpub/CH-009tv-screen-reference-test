@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2ACB657-9002-4993-ABE2-E90FDD8F1BEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Test_Automation</RootNamespace>
+    <AssemblyName>电视屏参测试系统2.2</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\电视屏参测试系统\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Aspose.Cells, Version=18.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\电视屏参测试系统\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Words, Version=17.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\电视屏参测试系统\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="CASDK2Net, Version=1.0.6835.20865, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\电视屏参测试系统\CASDK2Net.dll</HintPath>
+    </Reference>
+    <Reference Include="HslCommunication, Version=5.7.4.0, Culture=neutral, PublicKeyToken=cdb2261fa039ed67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\HslCommunication.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.12.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\电视屏参测试系统\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\自动夹持系统\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.113.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\自动夹持系统\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="classes\Class_Mysql.cs" />
+    <Compile Include="classes\Data160.cs" />
+    <Compile Include="classes\docx_save.cs" />
+    <Compile Include="classes\MySQLHelper.cs" />
+    <Compile Include="classes\Class_PLC.cs" />
+    <Compile Include="classes\RealTimeImageMaker.cs" />
+    <Compile Include="classes\zyb_class.cs" />
+    <Compile Include="config_json.cs" />
+    <Compile Include="cs200.cs" />
+    <Compile Include="Form_DrawCurve.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_DrawCurve.Designer.cs">
+      <DependentUpon>Form_DrawCurve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Gamma_CA410_SDK2net.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Gamma_CA410_SDK2net.Designer.cs">
+      <DependentUpon>Form_Gamma_CA410_SDK2net.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Gamma_CA410_Autoreset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Gamma_CA410_Autoreset.Designer.cs">
+      <DependentUpon>Form_Gamma_CA410_Autoreset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Gamma_CA410.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Gamma_CA410.Designer.cs">
+      <DependentUpon>Form_Gamma_CA410.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Gamma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Gamma.Designer.cs">
+      <DependentUpon>Form_Gamma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_160.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_160.Designer.cs">
+      <DependentUpon>Form_160.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_CA410.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_CA410.Designer.cs">
+      <DependentUpon>Form_CA410.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_control.Designer.cs">
+      <DependentUpon>Form_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_move.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_move.Designer.cs">
+      <DependentUpon>Form_move.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main2.designer.cs">
+      <DependentUpon>Form_Main2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_VG876.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_VG876.Designer.cs">
+      <DependentUpon>Form_VG876.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLC.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_DrawCurve.resx">
+      <DependentUpon>Form_DrawCurve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Gamma_CA410_SDK2net.resx">
+      <DependentUpon>Form_Gamma_CA410_SDK2net.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Gamma_CA410_Autoreset.resx">
+      <DependentUpon>Form_Gamma_CA410_Autoreset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Gamma_CA410.resx">
+      <DependentUpon>Form_Gamma_CA410.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Gamma.resx">
+      <DependentUpon>Form_Gamma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_160.resx">
+      <DependentUpon>Form_160.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_CA410.resx">
+      <DependentUpon>Form_CA410.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_control.resx">
+      <DependentUpon>Form_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_move.resx">
+      <DependentUpon>Form_move.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main2.resx">
+      <DependentUpon>Form_Main2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_VG876.resx">
+      <DependentUpon>Form_VG876.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="调试日志.txt" />
+    <None Include="black.png" />
+    <None Include="green.png" />
+    <Content Include="mysql.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sqlite.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="串口参数.txt" />
+    <Content Include="代码模版.txt" />
+    <Content Include="更新日志.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

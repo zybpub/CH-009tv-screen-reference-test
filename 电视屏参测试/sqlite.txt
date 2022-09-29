@@ -1,0 +1,54 @@
+﻿
+CREATE TABLE 动作名称表 (
+    id  INTEGER PRIMARY KEY,
+    动作名称 VARCHAR (500)  NOT NULL,
+    适用产品 VARCHAR (500)  DEFAULT NULL,
+    备注   VARCHAR (2000) DEFAULT NULL
+);
+
+INSERT INTO 动作名称表 (id, 动作名称, 适用产品, 备注) VALUES (1, '动作1', '大件', NULL);
+INSERT INTO 动作名称表 (id, 动作名称, 适用产品, 备注) VALUES (2, '动作2', '中件', NULL);
+INSERT INTO 动作名称表 (id, 动作名称, 适用产品, 备注) VALUES (3, '动作3', '小件', NULL);
+
+
+
+
+CREATE TABLE `动作明细表` (
+ `id` INTEGER PRIMARY KEY,
+ `动作名称` varchar(500) NOT NULL,
+ `序号` int(11) NOT NULL,
+ `X` int(11) NOT NULL,
+ `Y` int(8) NOT NULL,
+ `Z` int(8) NOT NULL,
+ `R` int(8) NOT NULL,
+ `AX` int(8) NOT NULL,
+ `AZ` int(8) NOT NULL,
+ `AR` int(8) NOT NULL
+ )
+
+ --
+-- 由SQLiteStudio v3.1.1 产生的文件 周五 8月 14 16:42:20 2020
+--
+-- 文本编码：System
+--
+PRAGMA foreign_keys = off;
+BEGIN TRANSACTION;
+
+-- 表：动作明细表
+CREATE TABLE `动作明细表` (
+ `id` INTEGER PRIMARY KEY,
+ `动作名称` varchar(500) NOT NULL,
+ `序号` int(11) NOT NULL,
+ `X` int(11) NOT NULL,
+ `Y` int(8) NOT NULL,
+ `Z` int(8) NOT NULL,
+ `R` int(8) NOT NULL,
+ `AX` int(8) NOT NULL,
+ `AZ` int(8) NOT NULL,
+ `AR` int(8) NOT NULL
+ );
+INSERT INTO 动作明细表 (id, 动作名称, 序号, X, Y, Z, R, AX, AZ, AR) VALUES (1, '动作1', 1, 100000, 100000, 100000, 0, 0, 0, 0);
+INSERT INTO 动作明细表 (id, 动作名称, 序号, X, Y, Z, R, AX, AZ, AR) VALUES (2, '动作1', 2, 200000, 200000, 200000, 0, 0, 0, 0);
+INSERT INTO 动作明细表 (id, 动作名称, 序号, X, Y, Z, R, AX, AZ, AR) VALUES (3, '动作2', 1, 300000, 300000, 300000, 0, 0, 0, 0);
+INSERT INTO 动作明细表 (id, 动作名称, 序号, X, Y, Z, R, AX, AZ, AR) VALUES (4, '动作2', 2, 400000, 400000, 400000, 0, 0, 0, 0);
+

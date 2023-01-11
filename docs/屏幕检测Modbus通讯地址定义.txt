@@ -1,0 +1,31 @@
+                                                              public static string PLC地址 = "192.168.1.7";
+当前位置读取：
+        public static string 分度盘当前位置读取 = "5500";        读取的值单位为毫度（1000毫度=1度）；
+        public static string X轴当前位置读取 = "5540";             读取的值单位为微米（1000微米=1毫米）；
+        public static string Y轴当前位置读取= "5580";              读取的值单位为微米（1000微米=1毫米）；
+        public static string Z轴当前位置读取= "5620";              读取的值单位为微米（1000微米=1毫米）；
+相对运动位置：
+        public static string 分度盘相对运动坐标写入= "2048";   写入的值单位为毫度（1000毫度=1度）；
+        public static string X轴相对运动坐标写入= "2052";        写入的值单位为微米（1000微米=1毫米）；
+        public static string Y轴相对运动坐标写入= "2056";        写入的值单位为微米（1000微米=1毫米）；
+        public static string Z轴相对运动坐标写入= "2060";        写入的值单位为微米（1000微米=1毫米）；
+相对运动启动：
+        public static string 分度盘相对运动启动="2340"；  分度盘相对运动坐标写入后，在此写入”1“确认后设备启动运行；
+        public static string X轴相对运动启动="2342"；       分度盘相对运动坐标写入后，在此写入”1“确认后设备启动运行；
+        public static string Y轴相对运动启动="2344"；       分度盘相对运动坐标写入后，在此写入”1“确认后设备启动运行；
+        public static string Z轴相对运动启动="2346"；       分度盘相对运动坐标写入后，在此写入”1“确认后设备启动运行；
+相对运动完成：
+        public static string 分度盘相对运动启动完成标准读取="2350"；读取到Ture或1代表运动完成;
+        public static string X轴相对运动启动完成标准读取="2352"；     读取到Ture或1代表运动完成；
+        public static string Y轴相对运动启动完成标准读取="2354"；     读取到Ture或1代表运动完成；
+        public static string Z轴相对运动启动完成标准读取="2356"；     读取到Ture或1代表运动完成；
+复位：
+        public static string 复位写入="2348";若需要复位在此写入”1“，X轴、分度盘、Y轴、Z轴会依次复位到PLC默认零点位。
+        public static string 分度盘轴复位完成="165";   读取到Ture或1代表复位完成；
+        public static string X轴复位完成="159";   读取到Ture或1代表复位完成；
+        public static string Y轴复位完成="161";   读取到Ture或1代表复位完成；
+        public static string Z轴复位完成="163";   读取到Ture或1代表复位完成；
+复位位置设置：
+        public static string X轴复位位置设置="2324";
+        public static string Y轴复位位置设置="2328";
+        public static string Z轴复位位置设置="2332";

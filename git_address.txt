@@ -1,1 +1,4 @@
 https://gitee.com/zybpub_suresh166/tv-screen-reference-test.git
+
+public
+https://github.com/zybpub/CH-009tv-screen-reference-test.git
